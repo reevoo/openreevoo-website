@@ -13,14 +13,29 @@ defmodule OpenreevooWebsite.Router do
     plug :accepts, ["json"]
   end
 
+  # Pipeline for serving badges
+  pipeline :images do
+    plug :put_secure_browser_headers
+  end
+
+  # Main website
   scope "/", OpenreevooWebsite do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", OpenreevooWebsite do
-  #   pipe_through :api
-  # end
+  # Badge serving
+  scope "/badges", OpenreevooWebsite do
+    pipe_through :images
+
+    get "/:project_name", BadgesController, :show
+  end
+
+  # API
+  scope "/api", OpenreevooWebsite do
+    pipe_through :api
+
+    post "/review", ReviewsController, :create
+  end
 end
