@@ -27,10 +27,10 @@ defmodule OpenreevooWebsite.Router do
   end
 
   # Badge serving
-  scope "/badges", OpenreevooWebsite do
+  scope "/badge", OpenreevooWebsite do
     pipe_through :images
 
-    get "/:project_name", BadgesController, :show
+    get "/:project_name", BadgeController, :show
   end
 
   # API
