@@ -5,6 +5,6 @@ defmodule OpenreevooWebsite.BadgeController do
     conn
     |> put_layout(false)
     |> put_resp_content_type("image/svg+xml")
-    |> render("badge.html", %{ rating: 5.0 })
+    |> render("badge.html", %{ rating: 0.0, number_of_reviews: 1 })
   end
 end

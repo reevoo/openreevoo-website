@@ -1,13 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="90" height="20">
+<svg height="20" width="246" xmlns="http://www.w3.org/2000/svg">
+  <linearGradient id="b" x2="0" y2="100%">
+    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
   <mask id="a">
-    <rect width="90" height="20" rx="3" fill="#fff"/>
+    <rect fill="#fff" height="20" rx="3" width="246"/>
   </mask>
   <g mask="url(#a)">
-    <path fill="#555" d="M0 0h47v20H0z"/>
-    <path fill="#4c1" d="M47 0h53v20H47z"/>
+    <path d="M0 0h110v20H0z" fill="#555"/>
+    <path d="M110 0h136v20H110z" fill="<%= rating_colour(@rating, @number_of_reviews) %>"/>
+    <path d="M0 0h246v20H0z" fill="url(#b)"/>
   </g>
-  <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
-    <text x="22.5" y="14">rating</text>
-    <text x="68.5" y="14"><%= @rating %></text>
+  <g fill="#fff" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11" text-anchor="middle">
+    <text fill="#010101" fill-opacity=".3" x="55" y="15">recommended by</text>
+    <text x="55" y="14">recommended by</text>
+    <text fill="#010101" fill-opacity=".3" x="177" y="15"><%= status(@rating, @number_of_reviews) %></text>
+    <text x="177" y="14"><%= status(@rating, @number_of_reviews) %></text>
   </g>
 </svg>
