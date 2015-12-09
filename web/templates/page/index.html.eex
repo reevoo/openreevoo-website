@@ -2,3 +2,28 @@
   <h2>Openreevoo</h2>
   <p class="lead">Reviews for open source software</p>
 </div>
+
+<p>There are lots of open source projects out there. But how do you know which projects are <i>good</i> and which are <i>bad</i>?</p>
+
+<p>OpenReevoo collects reviews from <b>real users</b> of the project to let you know which open source projects you should use into your own projects.</p>
+
+<h2>How We Do It</h2>
+
+<ol>
+  <li>Install our review script in your language.</li>
+  <li>Go out and try an open source library.</li>
+  <li>Run our review script in your project and tell us about the library.</li>
+  <li>Your review will be collected and displayed on the OpenReevoo website!</li>
+</ol>
+
+<p>Easy peasy.</p>
+
+<h2>Why Trust You?</h2>
+
+<p><a href="http://www.reevoo.com">Reevoo</a> is a company based on reviews. When reviewing products, we take precautions to ensure reviews are from real people who have bought products.</p>
+
+<p>OpenReevoo tries to follow in the footsteps of Reevoo by only allowing you to review the dependencies of your project. This way, you can be sure that reviews are from users of the project.</p>
+
+<h2>What About My Project?</h2>
+
+<p>Proud of your project? Show off with an OpenReevoo badge!</p>
